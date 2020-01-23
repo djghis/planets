@@ -38,4 +38,9 @@ found_closer_planets_to_sun= found_planets.map {|planet| planet.distance_from_su
 return found_closer_planets_to_sun.length
 end
 
+def get_total_number_of_moons
+  count_moons= @planets.map{|planet| planet.number_of_moons}
+  p count_moons.reduce{|total,moon_number| total + moon_number }
+end
+
 end
